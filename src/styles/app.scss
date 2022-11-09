@@ -1,10 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
+$color-1: #3b556d;
+$color-2: #5fc2ba;
+$color-3: #1c2942;
+$white: white;
+
+body {
+  background-color: #d4d3dc;
+}
+
+.welcome{
+  text-align: center;
+}
+
 .App {
   width: 80%;
   margin: auto;
+  font-family: "Cherry Swash";
   input {
     border: none;
   }
   .search {
     padding-top: 25px;
+    margin-bottom: 50px;
+  }
+  .current-weather {
+    width: 30%;
+    margin: auto;
+    height: auto;
+    background-color: $color-1;
+    color: $color-2;
+    border-radius: 20px;
+    padding: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    .info-principale {
+      grid-area: 1/1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .ville {
+        h1 {
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+        h3 {
+          margin-top: 0;
+        }
+      }
+      .temperature {
+        h1 {
+          font-size: 5rem;
+          margin: 0;
+        }
+      }
+    }
+    .info-secondaire {
+      grid-area: 1/2;
+      .logo {
+        width: 80%;
+        img {
+          width: 100%;
+        }
+      }
+      .others-info {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        .row-info {
+          display: flex;
+          justify-content: space-between;
+          width: 80%;
+          font-size: 0.8rem;
+          margin: auto;
+          span:nth-child(2) {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .current-weather {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .current-weather {
+      width: 50%;
+      display: block;
+      text-align: center;
+    }
+    .info-secondaire {
+      .logo {
+        margin: auto;
+      }
+    }
   }
 }
