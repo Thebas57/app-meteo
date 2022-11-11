@@ -9,7 +9,7 @@ const Search = ({ onSearchChange }) => {
   // Fonction quand on choisit une ville
   const handleSearch = (data) => {
     setSearch(data);
-    
+
     onSearchChange(data);
   };
 
@@ -23,7 +23,6 @@ const Search = ({ onSearchChange }) => {
       .then(function (response) {
         return {
           options: response.data.data.map((city) => {
-            console.log(city);
             return {
               value: city.latitude + " - " + city.longitude,
               label: city.name + ", " + city.countryCode,

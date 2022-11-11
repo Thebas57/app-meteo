@@ -1,7 +1,6 @@
 import React from 'react'
 
 const CurrentWheater = ({weather}) => {
-    console.log(weather)
   return (
     <div className='current-weather'>
         <div className="info-principale">

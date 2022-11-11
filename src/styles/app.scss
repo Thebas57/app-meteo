@@ -1,21 +1,30 @@
-@import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Josefin+Sans:wght@100&family=Nova+Round&display=swap");
+@font-face {
+  font-family: myFirstFont;
+  src: url(Baskervville-Regular.ttf);
+}
+
 $color-1: #3b556d;
 $color-2: #5fc2ba;
 $color-3: #1c2942;
 $white: white;
 
+$font-1: "Nova Round", cursive;
+$font-2: "Dosis", sans-serif;
+$font-3: "Josefin Sans", serif;
+
 body {
   background-color: #d4d3dc;
 }
 
-.welcome{
+.welcome {
   text-align: center;
 }
 
 .App {
   width: 80%;
   margin: auto;
-  font-family: "Cherry Swash";
+  font-family: cursive;
   input {
     border: none;
   }
@@ -74,6 +83,67 @@ body {
           width: 80%;
           font-size: 0.8rem;
           margin: auto;
+          span:nth-child(2) {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  .forecast {
+    .princ-forecast {
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      background-color: white;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      align-items: center;
+      font-size: 1.5rem;
+      font-family: cursive;
+      cursor: pointer;
+      .img {
+        width: 5%;
+        img {
+          width: 100%;
+        }
+      }
+      div {
+        width: 21%;
+      }
+      .temp{
+        text-align: end;
+        color: $color-2;
+      }
+    }
+    .second-forecast {
+      height: auto;
+      width: 30%;
+      background-color: $color-2;
+      margin: auto;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: 1fr, 1fr;
+      text-align: center;
+      padding: 20px;
+      gap: 50px;
+      .left {
+        grid-area: 1/1;
+        .row {
+          display: flex;
+          justify-content: space-between;
+          span:nth-child(2) {
+            font-weight: bold;
+          }
+        }
+      }
+      .right {
+        grid-area: 1/2;
+        .row {
+          display: flex;
+          justify-content: space-between;
           span:nth-child(2) {
             font-weight: bold;
           }
