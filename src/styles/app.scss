@@ -112,7 +112,7 @@ body {
       div {
         width: 21%;
       }
-      .temp{
+      .temp {
         text-align: end;
         color: $color-2;
       }
@@ -155,16 +155,44 @@ body {
     .current-weather {
       width: 50%;
     }
+    .second-forecast {
+      width: 50% !important;
+    }
   }
   @media screen and (max-width: 800px) {
     .current-weather {
-      width: 50%;
+      width: 70%;
       display: block;
       text-align: center;
     }
     .info-secondaire {
       .logo {
         margin: auto;
+      }
+    }
+    .forecast {
+      .princ-forecast {
+        height: 150px;
+        flex-wrap: wrap;
+        .img {
+          width: 20%;
+        }
+        .day {
+          width: 70%;
+          text-align: center;
+        }
+        .info {
+          width: inherit;
+          color: $color-3;
+        }
+        .temp {
+          width: inherit;
+        }
+      }
+      .second-forecast{
+        display: flex;
+        flex-direction: column;
+        gap: inherit;
       }
     }
   }
